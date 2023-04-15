@@ -1,0 +1,50 @@
+{{define "content"}}
+<h1 class="h3 mb-4 text-gray-800">Acara page</h1>
+
+<div class="col-lg-10">
+    <div class="card mb-4 py-3 border-left-primary ">
+        <div class=" mb-4">
+            <div class="card-body">
+                <h3 class="h5 mb-4 text-gray-800">Tambah Acara</h3>
+                <form action="/users" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nama Acara</label>
+                        <input type="text" name="name" required class="form-control" value="{{ .Name }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="harga">Harga Acara</label>
+                        <input type="text" name="harga" required class="form-control" value="{{ .Email }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="harga">Tanggal Acara</label>
+                        <input type="date" name="tanggal" required class="form-control" value="{{ .Email }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Deskripsi Acara</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="input-group is-invalid">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile" required>
+                            <label class="custom-file-label" for="validatedInputGroupCustomFile">Choose file...</label>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Tambah</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{end}}
